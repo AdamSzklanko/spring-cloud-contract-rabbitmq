@@ -1,13 +1,17 @@
 fixedDelay: 5000
-spring:
-  cloud:
-    stream:
-      bindings:
-        output:
-          destination: contract
-          producer:
-            requiredGroups : contractor
-      rabbit:
-        bindings:
-          producer:
-            exchangeType: direct
+            spring:
+              cloud:
+                stream:
+                  default:
+                    contentType: application/json
+                  bindings:
+                    output:
+                      destination: contract
+                      producer:
+                        requiredGroups : contractor
+                  rabbit:
+                    bindings:
+                      producer:
+                        exchangeType: direct
+            server:
+              port: 8998

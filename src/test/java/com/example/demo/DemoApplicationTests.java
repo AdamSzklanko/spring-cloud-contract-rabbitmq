@@ -12,12 +12,9 @@ import java.util.UUID;
 @SpringBootTest
 public class DemoApplicationTests {
 
-    @Autowired
-    MessageSender messageSender;
 
     @Test
     public void contextLoads() {
-        System.out.println(messageSender.send(UUID.randomUUID().toString()));
     }
 
 }
